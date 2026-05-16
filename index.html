@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gatshu Links</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: #050510;
+      color: white;
+    }
+
+    /* ===== STAR BACKGROUND ===== */
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .stars::before,
+    .stars::after {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: moveStars 60s linear infinite;
+      opacity: 0.2;
+    }
+
+    .stars::after {
+      animation-duration: 120s;
+      opacity: 0.1;
+    }
+
+    @keyframes moveStars {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 430px;
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(18px);
+      border-radius: 25px;
+      padding: 40px 25px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 0 40px rgba(0,255,255,0.15);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ===== PROFILE ===== */
+    .profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid cyan;
+      box-shadow: 0 0 20px cyan;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 30px;
+      text-shadow: 0 0 10px cyan;
+    }
+
+    p {
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    /* ===== BADGE ===== */
+    .badge {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      margin-bottom: 15px;
+      background: rgba(0,255,255,0.1);
+      border: 1px solid cyan;
+      box-shadow: 0 0 10px cyan;
+    }
+
+    /* ===== BUTTON ===== */
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 14px;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(135deg, #00ffff20, #ff00ff20);
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* shine effect */
+    .link::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: 0.5s;
+    }
+
+    .link:hover::before {
+      left: 100%;
+    }
+
+    .link:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px cyan;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+
+  <img class="profile" src="WhatsApp Image 2026-05-16 at 17.03.16.jpeg" alt="profile">
+
+  <h1>Gatshu</h1>
+  <p>Gaming Creator • Content Creator</p>
+  <div class="badge">🔥 LIVE CREATOR HUB</div>
+
+  <a class="link" href="https://www.youtube.com/@gatshuf" target="_blank">
+    <i class="fab fa-youtube"></i> YouTube Channel
+  </a>
+
+  <a class="link" href="https://chat.whatsapp.com/EhinMB66idxI9MPL4sjeBr" target="_blank">
+    <i class="fab fa-whatsapp"></i> WhatsApp Group
+  </a>
+
+  <a class="link" href="https://www.tiktok.com/@gatsufitri" target="_blank">
+    <i class="fab fa-tiktok"></i> TikTok
+  </a>
+
+  <a class="link" href="https://sociabuzz.com/gatshuf/tribe" target="_blank">
+    <i class="fas fa-heart"></i> Donate
+  </a>
+
+  <div class="footer">© 2026 Gatshu Links</div>
+
+</div>
+
+</body>
+</html>
